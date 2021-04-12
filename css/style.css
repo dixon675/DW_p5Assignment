@@ -5,15 +5,37 @@
 html, body {
 	min-height: 100vh;
 	margin: 0;
+	background-color: rgb(40, 40, 40);
 }
 
 img {
 	max-width: 100%;
 }
 
+h2 {
+	color: white;
+	padding: 20px;
+	text-align: center;
+
+	font-size: 25px;
+}
+
+canvas {
+	border: solid rgb(20,20,20) 1px;
+}
+
 #p5canvas {
 	padding: 20px;
 	text-align: center;
+}
+
+button {
+	text-decoration: none;
+
+	border-radius: 20px;
+	padding: 10px;
+	background-color: rgb(40,40,40);
+	color: white;
 }
 
 .buttons {

@@ -2,8 +2,8 @@ var vidcapture, ctracker, drawcanvas;
 
 function setup () {
 
+	// removes fill from the arcs
 	noFill();
-
 
 	var cnv = createCanvas(windowWidth/2, windowHeight/2);
 	cnv.parent("p5canvas");
@@ -37,26 +37,27 @@ function draw () {
 	if (positions) {
 		// ctracker.draw(drawCanvas);
 
-		// // canvas colour
-		// var backColorR = map(positions[62][0], 0, width, 0, 255);
-		// var backColorG = map(positions[62][1], 0, height, 0, 255);
-
 		// buttons
+		// generates 'painting'
 		$('.gen').click(function() {
 			console.log("clicked");
 			paint(positions);
 		})
 
+		// cleans canvas
 		$('.clear').click(function() {
 			console.log("clicked");
-			background(255);
+			background(40,40,40);
 		})
 	}
 }
 
 function paint(pos) {
-	for(var x=0; x < 4; x++) {
-		for(var y=0; y < 4; y++){
+
+	// clears the canvas for each new click
+	background(40,40,40);
+
+	for(var x=0; x < 51; x++) {
 
 			// random variables
 			var p1 = random(2 * PI);
@@ -81,11 +82,10 @@ function paint(pos) {
 
 			// shapes
 			arc(pos[r1][0], pos[r2][1], w, h, p1, p2);
-		}
+		
 	}
 
-	for(var i=0; i < 4; i++) {
-		for(var j=0; j < 4; j++){
+	for(var i=0; i < 41; i++) {
 
 			// random variables
 			var l1 = floor(random(0, 70));
@@ -106,6 +106,5 @@ function paint(pos) {
 
 			// line
 			line(pos[l1][0], pos[l3][1], pos[l2][0], pos[l4][1]);
-		}
 	}
 }
