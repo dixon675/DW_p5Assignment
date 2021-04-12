@@ -4,6 +4,14 @@
 
 This repo uses p5.js and face tracking data from the clmtracker.js library to create a unique composition across a digital canvas. The intention is to use facial mapping data to determine the positioning of various points, and then create a composition similar to a Jackson Pollock painting.
 
-## Citations
+### How it Works
+
+Conceptually, this was difficult to tackle. I knew the most straight forward way to code it would be to hard code every line, but I also knew that was the least efficient. I started using for loops early on to generate a larger number or arcs and lines, but they were very obviously repeating and following specific points of the viewers face. 
+
+The key was to add a random modifier to select a point on the viewers face and round it to the nearest whole number so it wouldn't break the processing code when it created the arcs and lines.
+
+Once I had that side figured out, it was very simple to reconfigure the code to randomize colour based off the location of the veiwers face as well.
+
+### Citations
 
 * [https://github.com/auduno/clmtrackr]
