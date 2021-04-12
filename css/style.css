@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100vh;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+#p5canvas {
+	padding: 20px;
+	text-align: center;
+}
+
+.buttons {
+	justify-content: center;
+	text-align: center;
+}
