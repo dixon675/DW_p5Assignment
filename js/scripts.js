@@ -40,21 +40,26 @@ function draw () {
 		// buttons
 		// generates 'painting'
 		$('.gen').click(function() {
-			console.log("clicked");
+			console.log("generate clicked");
 			paint(positions);
-		})
-
-		// cleans canvas
-		$('.clear').click(function() {
-			console.log("clicked");
-			background(40,40,40);
 		})
 	}
 }
 
+
+// clear canvas
+$('.clear').click(function() {
+	console.log("clear clicked");
+	background(40,40,40);
+})
+
+
 function paint(pos) {
 
 	// clears the canvas for each new click
+	
+    // Ideally this wouldn't be here but after clearing the canvas
+	// and regenerating, the old shapes
 	background(40,40,40);
 
 	for(var x=0; x < 51; x++) {
@@ -108,3 +113,5 @@ function paint(pos) {
 			line(pos[l1][0], pos[l3][1], pos[l2][0], pos[l4][1]);
 	}
 }
+
+// declare variables outside of the loop. Button refreshes variables?
